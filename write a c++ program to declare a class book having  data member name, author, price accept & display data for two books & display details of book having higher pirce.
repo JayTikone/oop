@@ -1,0 +1,46 @@
+
+#include <iostream>
+ using namespace std;
+ 
+class book{
+private:
+	char book_name[100], book_author[100];
+	
+	public:
+		float price;
+		void putdata(){
+		
+		cout<<"enter the book name"<<endl;
+		cin>>book_name;
+		cout<<"enter the book author"<<endl;
+		cin>>book_author;
+		cout<<"enter the book price "<<endl;
+		cin>>price;
+	}
+	void display()
+	{
+		cout<<"the name of the book is"<<book_name<<endl;
+		cout<<"the author of the book is "<<book_author<<endl;
+		cout<<"the price of the book is "<<price<<endl;
+	}
+	};
+	
+	int main()
+	{
+		book b1,b2;
+		b1.putdata();
+		b2.putdata();
+		
+		if(b1.price>b2.price)
+		{
+			cout<<"displaying b1's display"<<endl;
+			b1.display();
+			}
+			else
+			{
+				cout<<"displaying b2's display"<<endl;
+				b2.display();
+				
+			}
+			return 0;
+		}
