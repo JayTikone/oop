@@ -17,3 +17,8 @@ int size=7;
 cout<<add(a,size);
 return 0;
 }
+
+
+output:
+
+28
