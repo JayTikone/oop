@@ -44,3 +44,23 @@ private:
 			}
 			return 0;
 		}
+
+
+output :
+
+enter the book name
+veer
+enter the book author
+jay
+enter the book price
+400
+enter the book name
+virtual
+enter the book author
+aditya
+enter the book price
+500
+displaying b2's display
+the name of the book isvirtual
+the author of the book is aditya
+the price of the book is 500
