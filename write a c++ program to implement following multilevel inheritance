@@ -1,0 +1,63 @@
+#include<iostream>
+using namespace std;
+class car{
+	protected:
+		char car_type[20];
+		
+		public:
+			void accept(){
+				cout<<"enter the car_type of car"<<endl;
+				cin>>car_type;
+			}
+			void display(){
+				cout<<"the car_type of car is = "<<car_type<<endl;
+			}
+};
+class brand :public car
+{
+	protected:
+		char brand_name[20];
+		float speed;
+		
+		public:
+			void accept1(){
+				cout<<"enter the brand_name "<<endl;
+				cin>>brand_name;
+				cout<<"enter the speed of brand "<<endl;
+				cin>>speed;
+			}
+			void display1(){
+				
+				cout<<"the brand_name of brand is = "<<brand_name<<endl;
+				cout<<"the speed of brand is = "<<speed<<endl;
+			}
+};
+class model :public brand
+{
+	protected:
+		char model_name[20];
+		float price;
+		
+		public:
+			void accept2(){
+				cout<<"enter the model_name of model "<<endl;
+				cin>> model_name;
+				cout<<"enter the price of model "<<endl;
+				cin>>price;
+			}
+			void display2(){
+				cout<<"the model_name of model is = "<<model_name<<endl; 
+				cout<<"the price of model is = "<<price<<endl;
+			}
+	};
+	int main(){
+	model m1;
+		m1.accept();
+		m1.accept1();
+		m1.accept2();
+		m1.display();
+		m1.display1();
+		m1.display2();
+		return 0;
+	}
+			
