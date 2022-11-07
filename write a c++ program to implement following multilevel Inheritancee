@@ -1,0 +1,71 @@
+
+#include<iostream>
+using namespace std;
+class person{
+	protected:
+		char name[20];
+		char gender[20];
+		int age;
+		
+		public:
+			void accept(){
+				cout<<"enter the name of person"<<endl;
+				cin>>name;
+				cout<<"enter the gender of person"<<endl;
+				cin>>gender;
+				cout<<"enter the age of person"<<endl;
+				cin>>age;
+			}
+			void display(){
+				cout<<"the name of person is = "<<name<<endl;
+				cout<<"the gender of person is = "<<gender<<endl;
+				cout<<"the age of person is = "<<age<<endl;
+			}
+};
+class employee :public person
+{
+	protected:
+		int emp_id;
+		char company[20];
+		float salary;
+		
+		public:
+			void accept1(){
+				cout<<"enter the emp_id of employee "<<endl;
+				cin>>emp_id;
+				cout<<"enter the company of employee "<<endl;
+				cin>>company;
+				cout<<"enter the salary of employee "<<endl;
+				cin>>salary;
+			}
+			void display1(){
+				cout<<"the emp_id of employee is = "<<emp_id<<endl;
+				cout<<"the company of employee is = "<<company<<endl;
+				cout<<"the salary of employee is = "<<salary;
+			}
+};
+class programmer :public employee
+{
+	protected:
+		int no_of_prog_lang_known;
+		
+		public:
+			void accept2(){
+				cout<<"enter the no_of_prog_lang_known of programmer "<<endl;
+				cin>>no_of_prog_lang_known;
+			}
+			void display2(){
+				cout<<"the no_of_prog_lang_known is = "<<no_of_prog_lang_known<<endl;
+			}
+	};
+	int main(){
+		programmer p;
+		p.accept();
+		p.accept1();
+		p.accept2();
+		p.display();
+		p.display1();
+		p.display2();
+		return 0;
+	}
+			
